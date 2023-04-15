@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".BrandActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="brandFirstLetter"
+            type="java.lang.String" />
+
+        <variable
+            name="adapter"
+            type="com.example.car.adapter.LogoRecyclerAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BrandActivity">
+
+        <TextView
+            android:id="@+id/brand_search_tips_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="请输入汽车品牌名称拼音首字母，如A，a"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/brand_search_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="品牌首字母"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/brand_search_tips_tv" />
+
+        <EditText
+            android:id="@+id/brand_search_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:drawable/edit_text"
+            android:maxLength="1"
+            app:layout_constraintBottom_toBottomOf="@id/brand_search_title_tv"
+            app:layout_constraintLeft_toRightOf="@id/brand_search_title_tv"
+            app:layout_constraintRight_toLeftOf="@id/brand_search_btn"
+            app:layout_constraintTop_toTopOf="@id/brand_search_title_tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/brand_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:background="@color/teal_700"
+            android:text="查询"
+            app:layout_constraintBottom_toBottomOf="@id/brand_search_title_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/brand_search_title_tv" />
+
+        <TextView
+            android:id="@+id/brand_first_letter_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_700"
+            android:paddingStart="20dp"
+            android:text="@{brandFirstLetter}"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/brand_search_btn"
+            tools:text="A" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brand_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:adapter="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/brand_first_letter_tv"
+            app:spanCount="4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
