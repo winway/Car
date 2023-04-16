@@ -10,7 +10,7 @@ import java.util.List;
  * @Date: 2023/4/15 7:02
  * @Description:
  **/
-public class LogoBean implements Serializable {
+public class BrandBean implements Serializable {
 
     /**
      * reason : success

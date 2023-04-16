@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="java.lang.String" />
+
+        <variable
+            name="adapter"
+            type="com.example.car.adapter.SeriesRecyclerAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SeriesActivity">
+
+        <TextView
+            android:id="@+id/series_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/teal_700"
+            android:gravity="center"
+            android:text="@{title}"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="吉利" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/series_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adapter="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+</layout>

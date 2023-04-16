@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="com.example.car.bean.LogoBean.ResultBean" />
+            type="com.example.car.bean.BrandBean.ResultBean" />
     </data>
 
     <LinearLayout

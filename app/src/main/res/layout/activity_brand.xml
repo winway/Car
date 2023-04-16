@@ -11,7 +11,7 @@
 
         <variable
             name="adapter"
-            type="com.example.car.adapter.LogoRecyclerAdapter" />
+            type="com.example.car.adapter.BrandRecyclerAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
