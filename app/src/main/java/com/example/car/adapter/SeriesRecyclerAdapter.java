@@ -1,6 +1,7 @@
 package com.example.car.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.car.ModelsActivity;
 import com.example.car.R;
 import com.example.car.bean.SeriesBean;
 import com.example.car.databinding.ItemRvSeriesBinding;
@@ -45,6 +47,14 @@ public class SeriesRecyclerAdapter extends RecyclerView.Adapter<SeriesRecyclerAd
     public void onBindViewHolder(@NonNull SeriesViewHolder holder, int position) {
         SeriesBean.ResultBean bean = mData.get(position);
         holder.mBinding.setItem(bean);
+
+        holder.mBinding.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = ModelsActivity.newIntent(mContext, bean);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override

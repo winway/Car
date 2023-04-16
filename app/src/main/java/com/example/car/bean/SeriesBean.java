@@ -1,5 +1,6 @@
 package com.example.car.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  * @Date: 2023/4/15 9:41
  * @Description:
  **/
-public class SeriesBean {
+public class SeriesBean implements Serializable {
 
     /**
      * reason : success
@@ -45,7 +46,7 @@ public class SeriesBean {
         this.result = result;
     }
 
-    public static class ResultBean {
+    public static class ResultBean implements Serializable {
         /**
          * id : 4175
          * name : 奥迪Q3 Sportback

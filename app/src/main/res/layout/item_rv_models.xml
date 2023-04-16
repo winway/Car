@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="com.example.car.bean.SeriesBean.ResultBean" />
+            type="com.example.car.bean.ModelsBean.ResultBean" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -25,63 +25,63 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/item_rv_series_name_label_tv"
+                android:id="@+id/item_rv_models_name_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="车系名称："
+                android:text="名称："
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/item_rv_series_name_tv"
+                android:id="@+id/item_rv_models_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/item_rv_series_name_label_tv"
-                android:layout_toEndOf="@id/item_rv_series_name_label_tv"
-                android:text="@{item.levelname}"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="吉利" />
-
-            <TextView
-                android:id="@+id/item_rv_series_type_label_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/item_rv_series_name_label_tv"
-                android:text="车辆类型："
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/item_rv_series_type_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/item_rv_series_type_label_tv"
-                android:layout_toEndOf="@id/item_rv_series_type_label_tv"
+                android:layout_alignBaseline="@id/item_rv_models_name_label_tv"
+                android:layout_toEndOf="@id/item_rv_models_name_label_tv"
                 android:text="@{item.name}"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="吉利" />
+                tools:text="2022款 40T RS套件燃速型" />
 
             <TextView
-                android:id="@+id/item_rv_series_type_name_label_tv"
+                android:id="@+id/item_rv_models_year_label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item_rv_series_type_label_tv"
-                android:text="类型名称："
+                android:layout_below="@id/item_rv_models_name_label_tv"
+                android:text="年份："
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/item_rv_series_type_name_tv"
+                android:id="@+id/item_rv_models_year_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/item_rv_series_type_name_label_tv"
-                android:layout_toEndOf="@id/item_rv_series_type_name_label_tv"
-                android:text="@{item.sname}"
+                android:layout_alignBaseline="@id/item_rv_models_year_label_tv"
+                android:layout_toEndOf="@id/item_rv_models_year_label_tv"
+                android:text="@{item.year}"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="吉利" />
+                tools:text="2022" />
+
+            <TextView
+                android:id="@+id/item_rv_models_config_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_rv_models_year_label_tv"
+                android:text="配置："
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/item_rv_models_config_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/item_rv_models_config_label_tv"
+                android:layout_toEndOf="@id/item_rv_models_config_label_tv"
+                android:text="@{item.peizhi}"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="2.0升 涡轮增压 190马力 国VI" />
 
         </RelativeLayout>
 

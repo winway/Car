@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/activity_brand.xml" value="0.264" />
         <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/activity_models.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/activity_series.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/item_rv_brand_logo.xml" value="0.22826086956521738" />
+        <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/item_rv_models.xml" value="0.22826086956521738" />
         <entry key="..\:/AndroidStudioProjects/Car/app/src/main/res/layout/item_rv_series.xml" value="0.22826086956521738" />
       </map>
     </option>
